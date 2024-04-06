@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -19,22 +19,34 @@ export default function Navbar({ navigation }) {
                 justifyContent: 'center',
                 alignItems: 'center',
             }} onPress={() => navigation.navigate("Home")}>
-                <Octicons name="home" size={24} color="black" />
+                <Image resizeMode='contain' source={require('../welcome/assets/hom.png')}></Image>
                 <Text>Home</Text>
             </TouchableOpacity>
             <View>
                 <TouchableOpacity>
-                    <Ionicons name="chatbubbles-outline" size={25} color="black" />
-                    <Text>Chat</Text>
+                    <Image resizeMode='contain' source={require('../welcome/assets/n2.png')}></Image>
+                    <Text>Rishi Rx</Text>
                 </TouchableOpacity>
             </View>
-            {user.userType === "Trader" ? <View><TouchableOpacity onPress={() => navigation.navigate("NewPost")}>
+            {/* {user.userType === "Trader" ? <View><TouchableOpacity onPress={() => navigation.navigate("NewPost")}>
                 <AntDesign name="pluscircleo" size={24} color="black" />
                 <Text>Post</Text>
-            </TouchableOpacity></View> : <View></View>}
+            </TouchableOpacity></View> : <View></View>} */}
+            <View>
+                <TouchableOpacity style={{alignItems: 'center'}}>
+                    <Image resizeMode='contain' source={require('../welcome/assets/image 12.png')}></Image>
+                    <Text>Krish Pali</Text>
+                </TouchableOpacity>
+            </View>
+            <View>
+                <TouchableOpacity>
+                    <Image resizeMode='contain' source={require('../welcome/assets/ew.png')}></Image>
+                    <Text>Bazaar</Text>
+                </TouchableOpacity>
+            </View>
             <View ><TouchableOpacity>
-                <Feather name="shopping-cart" size={24} color="black" />
-                <Text>Cart</Text>
+            <Image resizeMode='contain' source={require('../welcome/assets/ba.png')}></Image>
+                <Text>Store</Text>
                 </TouchableOpacity>
             </View>
         </View>

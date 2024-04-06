@@ -12,6 +12,7 @@ import ShowPostScreen from './screens/ShowPostScreen.js';
 import LoginScreen from './screens/LoginScreen.js';
 import WelcomeScreen from './screens/WelcomeScreen.js';
 import SignupScreen from './screens/SignupScreen.js';
+import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import OrderScreen from './screens/OrderScreen.js';
 import { View, Text, StyleSheet } from 'react-native';
 import background from './components/auth/Background.js';
@@ -69,15 +70,25 @@ export default function App() {
             options={{
               title: 'FarmPe', header: (props) =>
               (
-                <View style={{ height: 170, paddingTop: 35, backgroundColor: '#5f8314'}}>
+                <View style={{ height: 150, paddingTop: 35, backgroundColor: '#5f8314' }}>
                   <View style={styles.upper}>
                     <View style={styles.left}>
-                      <Image style={styles.logo} resizeMode= 'contain' source={require('./components/welcome/assets/WelcomeLogo.png')}></Image>
+                      <Image style={{ marginLeft: '5%', backgroundColor: 'white', padding: 5, borderRadius: 50 }} resizeMode='contain' source={require('./components/welcome/assets/image 128.png')}></Image>
+                      <Image style={styles.logo} resizeMode='contain' source={require('./components/welcome/assets/WelcomeLogo.png')}></Image>
                     </View>
-                    <View style={styles.right}></View>
+                    <View style={styles.right}>
+                      <Image style={{ marginRight: '8%' }} resizeMode='contain' source={require('./components/welcome/assets/ph2.png')}></Image>
+                      <Image style={{ marginRight: '10%' }} resizeMode='contain' source={require('./components/welcome/assets/sh1.png')}></Image>
+                    </View>
                   </View>
                   <View style={styles.down}>
-                    <TextInput style={styles.input} placeholder= "Search" />
+                    <View style={styles.downLogo}>
+                      <View style={{display: 'flex',flexDirection: 'row'}}> 
+                      <MagnifyingGlassIcon size={20} strokeWidth={3} color={'grey'} marginTop={4} marginRight={3}/>
+                      <TextInput style={styles.input} placeholder="Search" />
+                      </View>
+                      <Image style={{display: 'flex',flexDirection: 'row',alignItems:'flex-end'}} resizeMode='contain' source={require('./components/welcome/assets/mic4.png')}></Image>
+                    </View>
                   </View>
                 </View>
               ),
@@ -114,25 +125,46 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row'
   },
-  down:{
-    height: '55%'
+  down: {
+    marginTop: '2%',
+    height: '45%'
   },
   left: {
-    width: '50%'
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '50%',
   },
   right: {
-    width: '50%'
-  },
-  logo:{
     width: '50%',
-    height: '100%'
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
-  input: {
+  logo: {
+    width: '50%',
+    height: '100%',
+    marginLeft: '3%'
+  },
+  // input: {
+  //   backgroundColor: 'white',
+  //   width: '96%',
+  //   height: '80%',
+  //   margin: '2%',
+  //   borderRadius: 10,
+  //   padding: 5
+  // },
+  downLogo: {
     backgroundColor: 'white',
     width: '96%',
     height: '80%',
     margin: '2%',
     borderRadius: 10,
-    padding: 5
+    padding: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   }
 })

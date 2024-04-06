@@ -26,6 +26,6 @@
 <u><b>7.Fertilizer Calculator</b></u>
 <font size="1">This Features allow farmers to estimate the total usage of fertilizer that will be used in the process of crop growing until the cultivation phase.By inputting specific details about their crops, soil conditions, and desired outcomes, users can obtain tailored recommendations for the types and quantities of fertilizers needed to optimize plant health, growth, and productivity.</font>
 <br/>
-<u><b>7.Plot Planner</b></u>
+<u><b>8.Plot Planner</b></u>
 <font size="1">A "Plot Planner using AR" (Augmented Reality) feature represents a cutting-edge integration of AR technology with farm management and planning tools. This innovative feature allows farmers, gardeners, and agricultural professionals to visually plan and manage their plots in real-time, overlaying digital information onto the physical world. By using the camera on a smartphone or tablet, users can interact with a virtual representation of their land, making it easier to design, organize, and optimize agricultural spaces for efficiency and productivity.</font>
 <br>

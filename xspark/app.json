@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "xspark",
-    "slug": "xspark",
+    "name": "farmpe",
+    "slug": "farmpe",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -22,10 +22,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.xspark"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.anonymous.xspark",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
     },
     "plugins": [
       [
@@ -33,12 +34,8 @@
         {
           "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiYmhhcmF0c2hlb3JhbiIsImEiOiJjbHNyNzlnMjgwMHloMnFwZzJvMXJ1bjdrIn0.wA481zzORnQyL-iocMy5dw"
         }
-      ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "f129e3a8-d36d-4c05-a1ed-3adbdf427c56"
-      }
-    }
+      ],
+      "expo-router"
+    ]
   }
 }

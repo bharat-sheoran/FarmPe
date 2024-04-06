@@ -23,9 +23,11 @@ export default function Navbar({ navigation }) {
                 <Text>Home</Text>
             </TouchableOpacity>
             <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>{
+                    navigation.navigate("KrishiRX")
+                }} style={{alignItems: 'center'}}>
                     <Image resizeMode='contain' source={require('../welcome/assets/n2.png')}></Image>
-                    <Text>Rishi Rx</Text>
+                    <Text>Krishi Rx</Text>
                 </TouchableOpacity>
             </View>
             {/* {user.userType === "Trader" ? <View><TouchableOpacity onPress={() => navigation.navigate("NewPost")}>

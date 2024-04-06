@@ -56,11 +56,11 @@ export default function Home({ navigation }) {
             <TouchableOpacity style={styles.sell}><Text>Sell</Text></TouchableOpacity>
           </View>
           <View style={styles.middle}>
-            <TouchableOpacity style={styles.received}><Text style={{fontWeight: '600', padding: 15}}>Received</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.pending}><Text style={{fontWeight: '600', padding: 15}}>Pending</Text></TouchableOpacity>
-            <TouchableOpacity style={styles.total}><Text style={{fontWeight: '600', padding: 15}}>Total</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.received}><Text style={{ fontWeight: '600', padding: 15 }}>Received</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.pending}><Text style={{ fontWeight: '600', padding: 15 }}>Pending</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.total}><Text style={{ fontWeight: '600', padding: 15 }}>Total</Text></TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.lower}><Text style={{color: 'white', fontWeight: '600'}}>View Ledger</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.lower}><Text style={{ color: 'white', fontWeight: '600' }}>View Ledger</Text></TouchableOpacity>
 
         </View>
       </ScrollView>
@@ -69,7 +69,10 @@ export default function Home({ navigation }) {
         marginBottom: 50
       }}>
         <View style={styles.outerCard}>
-          {search.length > 3 ? searchData.map((p) => card(p, p._id, p.image.url)) : post.map((p) => card(p, p.id, p.image))}
+          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+            <View style={styles.left}></View>
+            <View style={styles.right}></View>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -147,45 +150,57 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     height: 50,
   },
-  middle:{
+  middle: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 50,
     marginTop: 10
   },
-  lower:{
+  lower: {
     backgroundColor: '#1B1B78',
     padding: 10,
     borderRadius: 50,
     alignItems: 'center',
     marginTop: 10
   },
-  received:{
+  received: {
     width: '30%',
     backgroundColor: 'rgba(237, 168, 118, 0.52)',
     borderRadius: 10
   },
-  pending:{
+  pending: {
     width: '30%',
     backgroundColor: '#F1CBCB',
     borderRadius: 10
   },
-  total:{
+  total: {
     width: '30%',
     backgroundColor: '#BAE8C7',
     borderRadius: 10
   },
-  purchase:{
+  purchase: {
     width: '40%',
     borderWidth: 0.5,
     borderRadius: 10,
     padding: 15
   },
-  sell:{
+  sell: {
     width: '40%',
     borderWidth: 0.5,
     borderRadius: 10,
     padding: 15
-  }
+  },
+  left: {
+    borderWidth: 0.5,
+    width: '45%',
+    height: 132,
+    borderRadius: 15
+  },
+  right: {
+    borderWidth: 0.5,
+    width: '45%',
+    height: 132,
+    borderRadius: 15
+  },
 });

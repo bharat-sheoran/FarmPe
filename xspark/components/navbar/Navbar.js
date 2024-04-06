@@ -23,9 +23,9 @@ export default function Navbar({ navigation }) {
                 <Text>Home</Text>
             </TouchableOpacity>
             <View>
-                <TouchableOpacity onPress={() => {
+                <TouchableOpacity onPress={()=>{
                     navigation.navigate("KrishiRX")
-                }}>
+                }} style={{alignItems: 'center'}}>
                     <Image resizeMode='contain' source={require('../welcome/assets/n2.png')}></Image>
                     <Text>Krishi Rx</Text>
                 </TouchableOpacity>

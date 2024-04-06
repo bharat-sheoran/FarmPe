@@ -16,6 +16,7 @@ import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import OrderScreen from './screens/OrderScreen.js';
 import { View, Text, StyleSheet } from 'react-native';
 import background from './components/auth/Background.js';
+import KrishiRX from './screens/KrishiRX.js';
 
 export default function App() {
   const [user, setUser] = useState({});
@@ -102,7 +103,15 @@ export default function App() {
           <Stack.Screen
             name='NewPost'
             component={NewPostScreen}
+<<<<<<< HEAD
             options={{ title: 'New' }} />+
+=======
+            options={{ title: 'New' }} />
+          <Stack.Screen
+            name='KrishiRX'
+            component={KrishiRX}
+            options={{ title: 'KrishiRX' }} />
+>>>>>>> 45bc4d69893280dd51df88729a8368f30de0178a
 
           <Stack.Screen
             name='ShowPost'

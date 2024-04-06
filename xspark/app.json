@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "xspark",
+    "slug": "xspark",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.xspark"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiYmhhcmF0c2hlb3JhbiIsImEiOiJjbHNyNzlnMjgwMHloMnFwZzJvMXJ1bjdrIn0.wA481zzORnQyL-iocMy5dw"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7ffc0b3b-babc-486d-a8bf-4e4a0353215a"
+      }
+    }
+  }
+}

@@ -102,7 +102,7 @@ export default function App() {
           <Stack.Screen
             name='NewPost'
             component={NewPostScreen}
-            options={{ title: 'New' }} />
+            options={{ title: 'New' }} />+
 
           <Stack.Screen
             name='ShowPost'

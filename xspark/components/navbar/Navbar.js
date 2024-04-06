@@ -23,9 +23,11 @@ export default function Navbar({ navigation }) {
                 <Text>Home</Text>
             </TouchableOpacity>
             <View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => {
+                    navigation.navigate("KrishiRX")
+                }}>
                     <Image resizeMode='contain' source={require('../welcome/assets/n2.png')}></Image>
-                    <Text>Rishi Rx</Text>
+                    <Text>Krishi Rx</Text>
                 </TouchableOpacity>
             </View>
             {/* {user.userType === "Trader" ? <View><TouchableOpacity onPress={() => navigation.navigate("NewPost")}>
@@ -33,7 +35,7 @@ export default function Navbar({ navigation }) {
                 <Text>Post</Text>
             </TouchableOpacity></View> : <View></View>} */}
             <View>
-                <TouchableOpacity style={{alignItems: 'center'}}>
+                <TouchableOpacity style={{ alignItems: 'center' }}>
                     <Image resizeMode='contain' source={require('../welcome/assets/image 12.png')}></Image>
                     <Text>Krish Pali</Text>
                 </TouchableOpacity>
@@ -45,9 +47,9 @@ export default function Navbar({ navigation }) {
                 </TouchableOpacity>
             </View>
             <View ><TouchableOpacity>
-            <Image resizeMode='contain' source={require('../welcome/assets/ba.png')}></Image>
+                <Image resizeMode='contain' source={require('../welcome/assets/ba.png')}></Image>
                 <Text>Store</Text>
-                </TouchableOpacity>
+            </TouchableOpacity>
             </View>
         </View>
     )

@@ -103,15 +103,11 @@ export default function App() {
           <Stack.Screen
             name='NewPost'
             component={NewPostScreen}
-<<<<<<< HEAD
-            options={{ title: 'New' }} />+
-=======
             options={{ title: 'New' }} />
           <Stack.Screen
             name='KrishiRX'
             component={KrishiRX}
             options={{ title: 'KrishiRX' }} />
->>>>>>> 45bc4d69893280dd51df88729a8368f30de0178a
 
           <Stack.Screen
             name='ShowPost'

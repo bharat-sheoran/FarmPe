@@ -99,7 +99,7 @@ export default function HomeScreen({ route, navigation }) {
             }>
                 <View styles={styles.component}>
                     <Home navigation={navigation} />
-                    <StatusBar style="auto" />
+                    {<StatusBar style="auto" />}
                 </View>
             </ScrollView>
             <Navbar navigation={navigation} />

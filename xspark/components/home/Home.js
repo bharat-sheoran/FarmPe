@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View, SafeAreaView, TextInput } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View, SafeAreaView, TextInput, Button } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { ReqIP } from '@env';
@@ -49,28 +49,19 @@ export default function Home({ navigation }) {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-      <ScrollView showsVerticalScrollIndicator={false} style={{ padding: 10}}>
-        <View style={{ margin: 5, marginBottom: 4 }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#e5e5e5', borderRadius: 20, padding: 10, paddingLeft: 20 }}>
-            <MagnifyingGlassIcon size={20} strokeWidth={3} color={'grey'} />
-            <TextInput
-              placeholder='Search Order'
-              placeholderTextColor={'grey'}
-              style={{ flex: 1, fontSize: 16, marginLeft: 10 }}
-              onChangeText={(text) => handleSearch(text)}
-              value={search}
-            />
+      <ScrollView showsVerticalScrollIndicator={false} style={{ padding: 10 }}>
+        <View >
+          <View style={styles.upper}>
+            <TouchableOpacity style={styles.purchase}><Text>Purchase</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.sell}><Text>Sell</Text></TouchableOpacity>
           </View>
-        </View>
+          <View style={styles.middle}>
+            <TouchableOpacity style={styles.received}><Text style={{fontWeight: '600', padding: 15}}>Received</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.pending}><Text style={{fontWeight: '600', padding: 15}}>Pending</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.total}><Text style={{fontWeight: '600', padding: 15}}>Total</Text></TouchableOpacity>
+          </View>
+          <TouchableOpacity style={styles.lower}><Text style={{color: 'white', fontWeight: '600'}}>View Ledger</Text></TouchableOpacity>
 
-        {/* Category datas*/}
-
-        {/* <View className="mb-4">
-            <Categories/>
-        </View> */}
-
-        <View className="mb-4">
-          <SortCategories />
         </View>
       </ScrollView>
 
@@ -149,5 +140,52 @@ const styles = StyleSheet.create({
     height: 200,
     borderRadius: 10,
     marginBottom: 10,
+  },
+  upper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 50,
+  },
+  middle:{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    height: 50,
+    marginTop: 10
+  },
+  lower:{
+    backgroundColor: '#1B1B78',
+    padding: 10,
+    borderRadius: 50,
+    alignItems: 'center',
+    marginTop: 10
+  },
+  received:{
+    width: '30%',
+    backgroundColor: 'rgba(237, 168, 118, 0.52)',
+    borderRadius: 10
+  },
+  pending:{
+    width: '30%',
+    backgroundColor: '#F1CBCB',
+    borderRadius: 10
+  },
+  total:{
+    width: '30%',
+    backgroundColor: '#BAE8C7',
+    borderRadius: 10
+  },
+  purchase:{
+    width: '40%',
+    borderWidth: 0.5,
+    borderRadius: 10,
+    padding: 15
+  },
+  sell:{
+    width: '40%',
+    borderWidth: 0.5,
+    borderRadius: 10,
+    padding: 15
   }
 });

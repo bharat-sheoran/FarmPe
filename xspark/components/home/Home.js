@@ -69,9 +69,66 @@ export default function Home({ navigation }) {
         marginBottom: 50
       }}>
         <View style={styles.outerCard}>
-          <View style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
-            <View style={styles.left}></View>
-            <View style={styles.right}></View>
+          <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+            <View style={styles.left}>
+              <View style={{ display: 'flex', alignItems: 'center' }}>
+                <Text>My crops</Text>
+              </View>
+              <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '13%', height: '20%', justifyContent: 'space-around' }}>
+                <View>
+                  <Image resizeMode='contain' source={require('../welcome/assets/i1.png')}></Image>
+                  <Text>Wheat</Text>
+                </View>
+                <View>
+                  <Image resizeMode='contain' source={require('../welcome/assets/i2.png')}></Image>
+                  <Text>Maize</Text>
+                </View>
+                <View>
+                  <Image resizeMode='contain' source={require('../welcome/assets/i3.png')}></Image>
+                  <Text>Carrot</Text>
+                </View>
+              </View>
+              <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '15%', height: '20%', justifyContent: 'space-evenly' }}>
+                <View>
+                  <Image resizeMode='contain' source={require('../welcome/assets/i4.png')}></Image>
+                  <Text>Peas</Text>
+                </View>
+                <View>
+                  <Image resizeMode='contain' source={require('../welcome/assets/i5.png')}></Image>
+                  <Text>Tomato</Text>
+                </View>
+                <View>
+                  <Image style={{ marginTop: '6' }} resizeMode='contain' source={require('../welcome/assets/i6.png')}></Image>
+                  <Text>Add</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.right}>
+              <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center" }}>
+                <Image style={{ width: '100%', borderTopLeftRadius: 15, borderTopRightRadius: 15 }} resizeMode='cover' source={require('../welcome/assets/i7.png')} />
+                <Text>Rabi and Zaid season</Text>
+              </View>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
+                <View>
+                  <Image resizeMode='cover' source={require('../welcome/assets/i8.png')} />
+                  <Text>Weather</Text>
+                </View>
+                <View>
+                  <Image resizeMode='cover' source={require('../welcome/assets/i9.png')} />
+                  <Text>MSP</Text>
+                </View>
+                <View>
+                  <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
+                  <Text>Krishi</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View style={styles.outerDownCard}>
+            <TouchableOpacity>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
+              <Text>Fertlizer Calculator</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>
@@ -81,8 +138,8 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
   outerCard: {
-    marginHorizontal: 16,
-    marginTop: 16
+    marginHorizontal: 5,
+    marginTop: 15
   },
   card: {
     backgroundColor: '#fff',
@@ -195,12 +252,19 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     width: '45%',
     height: 132,
-    borderRadius: 15
+    borderRadius: 15,
   },
   right: {
     borderWidth: 0.5,
     width: '45%',
     height: 132,
     borderRadius: 15
+
   },
+  outerDownCard: {
+    borderWidth: 0.5,
+    marginTop: 15,
+    height: 175,
+    borderRadius: 15
+  }
 });

@@ -17,6 +17,7 @@ import OrderScreen from './screens/OrderScreen.js';
 import { View, Text, StyleSheet } from 'react-native';
 import background from './components/auth/Background.js';
 import KrishiRX from './screens/KrishiRX.js';
+import KrishiRXResult from './screens/KrishiRXResult.js';
 
 export default function App() {
   const [user, setUser] = useState({});
@@ -108,6 +109,10 @@ export default function App() {
             name='KrishiRX'
             component={KrishiRX}
             options={{ title: 'KrishiRX' }} />
+          <Stack.Screen
+            name='KrishiRXResult'
+            component={KrishiRXResult}
+            options={{ title: 'Disease Information' }} />
 
           <Stack.Screen
             name='ShowPost'

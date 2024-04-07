@@ -64,7 +64,7 @@ export default function Home({ navigation }) {
 
         </View>
       </ScrollView>
-
+      <Image style={{marginLeft: '1%'}}resizeMode='contain' source={require('../welcome/assets/n.png')}></Image>
       <ScrollView style={{
         marginBottom: 50
       }}>
@@ -105,7 +105,7 @@ export default function Home({ navigation }) {
             </View>
             <View style={styles.right}>
               <View style={{ flex: 1, justifyContent: "space-around", alignItems: "center" }}>
-                <Image style={{ width: '100%', borderTopLeftRadius: 15, borderTopRightRadius: 15 }} resizeMode='cover' source={require('../welcome/assets/i7.png')} />
+                <Image style={{ width: '100%', borderTopLeftRadius: 15, borderTopRightRadius: 15,marginBottom: '3%' }} resizeMode='cover' source={require('../welcome/assets/i7.png')} />
                 <Text>Rabi and Zaid season</Text>
               </View>
               <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
@@ -125,10 +125,42 @@ export default function Home({ navigation }) {
             </View>
           </View>
           <View style={styles.outerDownCard}>
-            <TouchableOpacity>
-              <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
+            <TouchableOpacity style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: 5, marginTop: '5%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 124.png')} />
               <Text>Fertlizer Calculator</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '5%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 16.png')} />
+              <Text>Krishi Mudra</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '5%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
+              <Text>Krishi Pali</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '3%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4377.png')} />
+              <Text>Yield Calculator</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '10%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 19.png')} /> 
+              <Text>Crop Protection</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '8%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4383.png')} />
+              <Text>Crop Categories</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '8%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4384.png')} />
+              <Text>Livestock</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '8%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4379.png')} />
+              <Text>Expert Talk</Text>
+            </TouchableOpacity>
+            <View>
+
+
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -264,7 +296,11 @@ const styles = StyleSheet.create({
   outerDownCard: {
     borderWidth: 0.5,
     marginTop: 15,
-    height: 175,
-    borderRadius: 15
+    height: 150,
+    borderRadius: 15,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    flexWrap: 'wrap'
   }
 });

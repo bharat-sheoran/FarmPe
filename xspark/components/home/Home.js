@@ -125,9 +125,13 @@ export default function Home({ navigation }) {
             </View>
           </View>
           <View style={styles.outerDownCard}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("FertilizerCalculator")}}>
               <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
               <Text>Fertlizer Calculator</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("YieldCalculator")}}>
+              <Image resizeMode='cover' source={require('../welcome/assets/image 12.png')} />
+              <Text>Yield Calculator</Text>
             </TouchableOpacity>
           </View>
         </View>

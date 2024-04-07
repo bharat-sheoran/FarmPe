@@ -32,7 +32,7 @@ export default function Navbar({ navigation }) {
             </View>
             {/* {user.userType === "Trader" ? <View><TouchableOpacity onPress={() => navigation.navigate("NewPost")}>
                 <AntDesign name="pluscircleo" size={24} color="black" />
-                <Text>Post</Text>
+                <Text>Post</Text>   
             </TouchableOpacity></View> : <View></View>} */}
             <View>
                 <TouchableOpacity style={{ alignItems: 'center' }}>

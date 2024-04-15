@@ -1,10 +1,10 @@
 # FarmPe
-<font size="1">1.FarmPAY is a vernacular-based Platform for farmers to connect with a large number of farmers and agriculture experts to share and learn knowledge. It is India’s first online farmers' community where farmers can ask crop-related questions and can get instant solutions in their languages.Our vision of <b>"Transforming the Future of Farmers"</b> is translating into making farmers <b>sustainable</b> and <b>profitable</b>.
+<font size="1">1.FarmPe is a vernacular-based Platform for farmers to connect with a large number of farmers and agriculture experts to share and learn knowledge. It is India’s first online farmers' community where farmers can ask crop-related questions and can get instant solutions in their languages.Our vision of <b>"Transforming the Future of Farmers"</b> is translating into making farmers <b>sustainable</b> and <b>profitable</b>.
 </font>
 <br/>
-2.FarmPay enables farmers to add crop details to the platform and get access to seed-to-harvest personalized crop advisory, which helps farmers reduce the cost of cultivation and increase crop yield, crop productivity, and crop quality.</font>
+2.FarmPe enables farmers to add crop details to the platform and get access to seed-to-harvest personalized crop advisory, which helps farmers reduce the cost of cultivation and increase crop yield, crop productivity, and crop quality.</font>
 
-# Key Features of FarmPay:
+# Key Features of FarmPe:
 <u><b>1.Crop Advisory For Agriculture: </b></u>
 <font size="1">Farmers can choose their crops and get personalized advice from sowing to harvesting. It covers the complete details of more than 70+ crops with farming package of practices, crop guides, and pest & disease guides, giving farmers complete knowledge about their crops and the problems associated with them, and all of this is in vernacular languages.</font>
 <br/>

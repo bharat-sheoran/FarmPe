@@ -6,16 +6,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import { store } from './app/store.js';
 import HomeScreen from './screens/HomeScreen.js';
-import EditPostScreen from './screens/EditPostScreen.js';
-import NewPostScreen from './screens/NewPostScreen.js';
-import ShowPostScreen from './screens/ShowPostScreen.js';
 import LoginScreen from './screens/LoginScreen.js';
 import WelcomeScreen from './screens/WelcomeScreen.js';
 import SignupScreen from './screens/SignupScreen.js';
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
-import OrderScreen from './screens/OrderScreen.js';
 import { View, Text, StyleSheet } from 'react-native';
-import background from './components/auth/Background.js';
 import KrishiRX from './screens/KrishiRX.js';
 import KrishiRXResult from './screens/KrishiRXResult.js';
 import FertlizerCalculator from './screens/FertilizerCalculator.js';
@@ -87,26 +82,17 @@ export default function App() {
                   </View>
                   <View style={styles.down}>
                     <View style={styles.downLogo}>
-                      <View style={{display: 'flex',flexDirection: 'row'}}> 
-                      <MagnifyingGlassIcon size={20} strokeWidth={3} color={'grey'} marginTop={4} marginRight={3}/>
-                      <TextInput style={styles.input} placeholder="Search" />
+                      <View style={{ display: 'flex', flexDirection: 'row' }}>
+                        <MagnifyingGlassIcon size={20} strokeWidth={3} color={'grey'} marginTop={4} marginRight={3} />
+                        <TextInput style={styles.input} placeholder="Search" />
                       </View>
-                      <Image style={{display: 'flex',flexDirection: 'row',alignItems:'flex-end'}} resizeMode='contain' source={require('./components/welcome/assets/mic4.png')}></Image>
+                      <Image style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end' }} resizeMode='contain' source={require('./components/welcome/assets/mic4.png')}></Image>
                     </View>
                   </View>
                 </View>
               ),
             }} />
 
-          <Stack.Screen
-            name='EditPost'
-            component={EditPostScreen}
-            options={{ title: 'Edit' }} />
-
-          <Stack.Screen
-            name='NewPost'
-            component={NewPostScreen}
-            options={{ title: 'New' }} />
           <Stack.Screen
             name='KrishiRX'
             component={KrishiRX}
@@ -123,15 +109,6 @@ export default function App() {
             name='YieldCalculator'
             component={YieldCalculator}
             options={{ title: 'Yield Calculator' }} />
-          <Stack.Screen
-            name='ShowPost'
-            component={ShowPostScreen}
-            options={{ title: 'Post' }} />
-
-          <Stack.Screen
-            name='OrderScreen'
-            component={OrderScreen}
-            options={{ title: 'Place Order' }} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

@@ -3,6 +3,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithout
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { ReqIP } from '@env';
+import { Ionicons } from '@expo/vector-icons';
 import { MagnifyingGlassIcon } from 'react-native-heroicons/outline';
 import Categories from './Categories';
 import SortCategories from './sortCategories';
@@ -13,7 +14,7 @@ export default function Home({ navigation }) {
   const dispatch = useDispatch();
   const post = useSelector((state) => state.post.post);
   const [search, setSearch] = useState("");
-
+  const [isLedger, setIsLedger] = useState('none');
   const [searchData, setSearchData] = useState([]);
 
   const handleSearch = async (value) => {
@@ -26,6 +27,15 @@ export default function Home({ navigation }) {
       }
     } catch (e) {
       console.log(e);
+    }
+  }
+
+  const showLedger = () => {
+    console.log(isLedger);
+    if (isLedger === 'flex') {
+      setIsLedger('none');
+    } else {
+      setIsLedger('flex');
     }
   }
 
@@ -60,11 +70,57 @@ export default function Home({ navigation }) {
             <TouchableOpacity style={styles.pending}><Text style={{ fontWeight: '600', padding: 15 }}>Pending</Text></TouchableOpacity>
             <TouchableOpacity style={styles.total}><Text style={{ fontWeight: '600', padding: 15 }}>Total</Text></TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.lower}><Text style={{ color: 'white', fontWeight: '600' }}>View Ledger</Text></TouchableOpacity>
-
+          <TouchableOpacity onPress={showLedger} style={styles.lower}><Text style={{ color: 'white', fontWeight: '600' }}>View Ledger</Text></TouchableOpacity>
+          <View style={{ display: isLedger }}>
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <Text style={{ fontSize: 20, fontWeight: '600', marginLeft: 20 }}>Today Sales</Text>
+              <Text style={{ fontSize: 20, fontWeight: '500', marginRight: 20 }}>₹0.00</Text></View>
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <Text style={{ fontSize: 20, fontWeight: '400', marginLeft: 20, backgroundColor: '#EE5454', padding: 10, borderRadius: 15, color: 'white' }}>₹  Have To Give</Text>
+              <Text style={{ fontSize: 20, fontWeight: '400', marginRight: 20, backgroundColor: '#489158', padding: 10, borderRadius: 15, color: 'white' }}>₹  Have To Take</Text>
+            </View>
+            <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+              <View style={{ borderWidth: 0.5, borderRadius: 10, width: '22%', height: 70, marginBottom: 2, marginTop: 10 }}>
+                <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                  <Ionicons name="cash-outline" size={24} color="black" />
+                  <Text>CASH</Text>
+                  <View style={{ display: 'flex', alignItems: 'center' }}>
+                    <Text>Rs 0.00</Text>
+                  </View>
+                </View>
+              </View>
+              <View style={{ borderWidth: 0.5, borderRadius: 10, width: '22%', height: 70, marginBottom: 2, marginTop: 10 }}>
+              <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                  <Image style={{marginTop: 8}} resizeMode='contain' source={require('../welcome/assets/p0.png')}></Image>
+                  <Text>ONLINE</Text>
+                  <View style={{ display: 'flex', alignItems: 'center' }}>
+                    <Text>Rs 0.00</Text>
+                  </View>
+                </View>
+              </View>
+              <View style={{ borderWidth: 0.5, borderRadius: 10, width: '22%', height: 70, marginBottom: 2, marginTop: 10 }}>
+              <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+              <Image style={{marginTop: 6}} resizeMode='contain' source={require('../welcome/assets/p1.png')}></Image>
+                  <Text>CHEQUE</Text>
+                  <View style={{ display: 'flex', alignItems: 'center' }}>
+                    <Text>Rs 0.00</Text>
+                  </View>
+              </View>
+              </View>
+              <View style={{ borderWidth: 0.5, borderRadius: 10, width: '22%', height: 70, marginBottom: 2, marginTop: 10 }}>
+              <View style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+              <Image style={{marginTop: 8}} resizeMode='contain' source={require('../welcome/assets/p2.png')}></Image>
+                  <Text>LOAN</Text>
+                  <View style={{ display: 'flex', alignItems: 'center' }}>
+                    <Text>Rs 0.00</Text>
+                  </View>
+              </View>
+              </View>
+            </View>
+          </View>
         </View>
       </ScrollView>
-      <Image style={{ marginLeft: '1%' }} resizeMode='contain' source={require('../welcome/assets/n.png')}></Image>
+      <View style={{ alignItems: 'center' }}><Image resizeMode='contain' source={require('../welcome/assets/n.png')}></Image></View>
       <ScrollView style={{
         marginBottom: 50
       }}>

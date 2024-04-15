@@ -15,6 +15,7 @@ import KrishiRX from './screens/KrishiRX.js';
 import KrishiRXResult from './screens/KrishiRXResult.js';
 import FertlizerCalculator from './screens/FertilizerCalculator.js';
 import YieldCalculator from './screens/YieldCalculator.js';
+import PlotPlanner from './screens/PlotPlanner.js';
 
 export default function App() {
   const [user, setUser] = useState({});
@@ -109,6 +110,10 @@ export default function App() {
             name='YieldCalculator'
             component={YieldCalculator}
             options={{ title: 'Yield Calculator' }} />
+          <Stack.Screen
+            name='Plot Planner'
+            component={PlotPlanner}
+            options={{ title: 'Plot Planner' }} />
 
         </Stack.Navigator>
       </NavigationContainer>

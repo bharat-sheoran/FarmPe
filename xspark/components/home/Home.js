@@ -213,6 +213,10 @@ export default function Home({ navigation }) {
               <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4379.png')} />
               <Text>Expert Talk</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Plot Planner")}} style={{ marginLeft: 5, alignItems: 'center', marginTop: '5%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4379.png')} />
+              <Text>Plot Planner</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

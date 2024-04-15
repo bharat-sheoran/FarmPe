@@ -197,6 +197,10 @@ export default function Home({ navigation }) {
               <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4377.png')} />
               <Text>Yield Calculator</Text>
             </TouchableOpacity>
+            <TouchableOpacity onPress={() => { navigation.navigate("YieldCalculator") }} style={{ marginLeft: 5, alignItems: 'center', marginTop: '5%' }}>
+              <Image resizeMode='cover' source={require('../welcome/assets/Rectangle 4377.png')} />
+              <Text>Plot Planner</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={{ marginLeft: 5, alignItems: 'center', marginTop: '5%' }}>
               <Image resizeMode='cover' source={require('../welcome/assets/image 19.png')} />
               <Text>Crop Protection</Text>

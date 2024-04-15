@@ -123,7 +123,6 @@ export default function App() {
             name='YieldCalculator'
             component={YieldCalculator}
             options={{ title: 'Yield Calculator' }} />
-
           <Stack.Screen
             name='ShowPost'
             component={ShowPostScreen}
